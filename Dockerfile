@@ -1,1 +1,1 @@
-FROM grafana/promtail:master-f20244d
+FROM grafana/promtail:v0.4.0
