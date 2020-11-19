@@ -7,7 +7,7 @@ WORKDIR /src
 RUN dnf -y update && \
   dnf -y install hostname make protobuf-devel golang \
   golang-github-gogo-protobuf systemd-devel
-RUN git clone --depth 1 --branch ${VERSION} https://github.com/grafana/loki.git /src
+RUN git clone --depth 1 --branch v${VERSION} https://github.com/grafana/loki.git /src
 RUN make clean && make BUILD_IN_CONTAINER=false promtail
 
 FROM fedora:33
