@@ -1,6 +1,6 @@
 FROM fedora:33 as build
 
-ARG VERSION=2.1.0
+ARG VERSION=2.2.0
 
 WORKDIR /src
 
