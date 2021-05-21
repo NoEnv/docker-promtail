@@ -13,7 +13,7 @@ FROM fedora:34
 
 RUN dnf -y install tzdata ca-certificates systemd-libs && \
   dnf clean all && \
-  rm -rf /var/lib/dnf/repos/* /tmp/* /var/tmp/*
+  rm -rf /var/lib/dnf/repos/* /tmp/* /var/tmp/* /var/log/*.log
 
 COPY --from=build /src/cmd/promtail/promtail /usr/bin/promtail
 COPY --from=build /src/cmd/promtail/promtail-docker-config.yaml /etc/promtail/config.yml
