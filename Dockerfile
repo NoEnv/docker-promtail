@@ -11,7 +11,7 @@ RUN make clean && make touch-protos && make BUILD_IN_CONTAINER=false promtail
 
 FROM fedora:34
 
-RUN dnf -y install tzdata ca-certificates systemd-libs && \
+RUN dnf -y --setopt=tsflags=nodocs install tzdata ca-certificates systemd-libs && \
   dnf clean all && \
   rm -rf /var/lib/dnf/repos/* /tmp/* /var/tmp/* /var/log/*.log
 
