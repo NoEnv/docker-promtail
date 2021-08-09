@@ -1,6 +1,6 @@
 FROM fedora:34 as build
 
-ARG VERSION=2.2.1
+ARG VERSION=2.3.0
 
 WORKDIR /src
 
@@ -15,8 +15,8 @@ RUN dnf -y --setopt=tsflags=nodocs install tzdata ca-certificates systemd-libs &
   dnf clean all && \
   rm -rf /var/lib/dnf/repos/* /tmp/* /var/tmp/* /var/log/*.log
 
-COPY --from=build /src/cmd/promtail/promtail /usr/bin/promtail
-COPY --from=build /src/cmd/promtail/promtail-docker-config.yaml /etc/promtail/config.yml
+COPY --from=build /src/clients/cmd/promtail/promtail /usr/bin/promtail
+COPY --from=build /src/clients/cmd/promtail/promtail-docker-config.yaml /etc/promtail/config.yml
 
 ENTRYPOINT ["/usr/bin/promtail"]
 
