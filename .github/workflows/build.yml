@@ -12,7 +12,7 @@ on:
 
 env:
   IMAGE_OWNER: noenv
-  IMAGE_NAME: mongo
+  IMAGE_NAME: promtail
 
 jobs:
   build:
