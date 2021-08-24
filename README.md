@@ -1,4 +1,5 @@
 [![Docker Pulls](https://badgen.net/docker/pulls/noenv/promtail)](https://hub.docker.com/r/noenv/promtail)
+[![build](https://github.com/NoEnv/docker-promtail/actions/workflows/build.yml/badge.svg)](https://github.com/NoEnv/docker-promtail/actions/workflows/build.yml)
 
 ## docker-promtail
 
