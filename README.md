@@ -1,4 +1,5 @@
 [![Docker Pulls](https://badgen.net/docker/pulls/noenv/promtail)](https://hub.docker.com/r/noenv/promtail)
+[![Quay.io Enabled](https://badgen.net/badge/quay%20pulls/enabled/green)](https://quay.io/repository/noenv/promtail)
 [![build](https://github.com/NoEnv/docker-promtail/actions/workflows/build.yml/badge.svg)](https://github.com/NoEnv/docker-promtail/actions/workflows/build.yml)
 
 ## docker-promtail
