@@ -11,6 +11,8 @@ RUN make clean && make BUILD_IN_CONTAINER=false promtail
 
 FROM registry.fedoraproject.org/fedora-minimal:35
 
+RUN microdnf -y install systemd-libs && microdnf clean all && rm -rf /var/lib/dnf /var/cache/*
+
 COPY --from=build /src/clients/cmd/promtail/promtail /usr/bin/promtail
 COPY --from=build /src/clients/cmd/promtail/promtail-docker-config.yaml /etc/promtail/config.yml
 
