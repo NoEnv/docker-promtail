@@ -1,6 +1,6 @@
 FROM registry.fedoraproject.org/fedora-minimal:35 as build
 
-ARG VERSION=2.4.1
+ARG VERSION=2.4.2
 
 WORKDIR /src
 
