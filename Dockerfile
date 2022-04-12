@@ -1,6 +1,6 @@
-FROM registry.fedoraproject.org/fedora-minimal:35 as build
+FROM registry.fedoraproject.org/fedora-minimal:36 as build
 
-ARG VERSION=2.4.2
+ARG VERSION=2.5.0
 
 WORKDIR /src
 
@@ -9,7 +9,7 @@ RUN microdnf -y install hostname make protobuf-devel golang \
 RUN git clone --depth 1 --branch v${VERSION} https://github.com/grafana/loki.git /src
 RUN make clean && make BUILD_IN_CONTAINER=false promtail
 
-FROM registry.fedoraproject.org/fedora-minimal:35
+FROM registry.fedoraproject.org/fedora-minimal:36
 
 RUN microdnf -y install systemd-libs && microdnf clean all && rm -rf /var/lib/dnf /var/cache/*
 
