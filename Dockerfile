@@ -1,6 +1,6 @@
 FROM registry.fedoraproject.org/fedora-minimal:36 as build
 
-ARG VERSION=2.6.1
+ARG VERSION=2.7.0
 
 WORKDIR /src
 
