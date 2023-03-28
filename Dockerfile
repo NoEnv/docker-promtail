@@ -1,6 +1,6 @@
 FROM registry.fedoraproject.org/fedora-minimal:37 as build
 
-ARG VERSION=2.7.4
+ARG VERSION=2.7.5
 
 WORKDIR /src
 
