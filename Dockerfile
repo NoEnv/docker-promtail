@@ -7,7 +7,7 @@ WORKDIR /src
 RUN microdnf -y --nodocs install hostname make protobuf-devel golang git \
   golang-github-gogo-protobuf systemd-devel
 RUN git clone --depth 1 --branch v${VERSION} https://github.com/grafana/loki.git /src
-RUN make clean && make BUILD_IN_CONTAINER=false promtail
+RUN make clean && make BUILD_IN_CONTAINER=false PROMTAIL_JOURNAL_ENABLED=true promtail
 
 FROM registry.fedoraproject.org/fedora-minimal:37
 
