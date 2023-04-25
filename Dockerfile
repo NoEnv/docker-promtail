@@ -1,6 +1,6 @@
 FROM registry.fedoraproject.org/fedora-minimal:38 as build
 
-ARG VERSION=2.8.0
+ARG VERSION=2.8.1
 
 WORKDIR /src
 
