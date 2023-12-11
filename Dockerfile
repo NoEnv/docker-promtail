@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora-minimal:38 as build
+FROM registry.fedoraproject.org/fedora-minimal:39 as build
 
 ARG VERSION=2.9.2
 
@@ -9,7 +9,7 @@ RUN microdnf -y --nodocs install hostname make protobuf-devel golang git \
 RUN git clone --depth 1 --branch v${VERSION} https://github.com/grafana/loki.git /src
 RUN make clean && make BUILD_IN_CONTAINER=false PROMTAIL_JOURNAL_ENABLED=true promtail
 
-FROM registry.fedoraproject.org/fedora-minimal:38
+FROM registry.fedoraproject.org/fedora-minimal:39
 
 RUN microdnf -y --nodocs install systemd-libs && microdnf clean all && rm -rf /var/lib/dnf /var/cache/*
 
