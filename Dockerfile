@@ -1,6 +1,6 @@
 FROM registry.fedoraproject.org/fedora-minimal:39 as build
 
-ARG VERSION=2.9.2
+ARG VERSION=2.9.3
 
 WORKDIR /src
 
